@@ -1,0 +1,16 @@
+# Visual studio folder
+.vs/
+
+# And files
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Hide this folder !
+.rayware/*
+
+# But keep the licenses
+!CODE-LICENSE.txt
+
+# Generic OS files
+*.DS_Store
