@@ -10,7 +10,7 @@
 .rayware/*
 
 # But keep the licenses
-!CODE-LICENSE.txt
+!LICENSE.txt
 
 # Generic OS files
 *.DS_Store
