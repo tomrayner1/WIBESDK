@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+#include "Core/StdAfx.h"
 
 #include "Logger.h"
 
@@ -63,7 +63,7 @@ void Logger::Critical(std::string msg)
 {
 	m_LoggingStatistics.CriticalCount++;
 
-	printf("\n===== [CRITICAL] \n%s%s\n\n", GetPrefix().c_str(), msg.c_str());
+	printf("\n+---- [CRITICAL] \n%s%s\n                    ----+\n", GetPrefix().c_str(), msg.c_str());
 }
 
 void Logger::Debug(std::string msg)

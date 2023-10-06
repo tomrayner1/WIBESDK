@@ -3,7 +3,17 @@
 #include <string>
 
 enum LogLevel;
-struct LogStatistics;
+
+struct LogStatistics {
+	int InfoCount = 0;
+	int WarnCount = 0;
+	int ErrorCount = 0;
+	int CriticalCount = 0;
+
+	#if _DEBUG
+	int DebugCount = 0;
+	#endif
+};
 
 class Logger {
 public:
@@ -39,15 +49,4 @@ enum LogLevel {
 	WARN,
 	ERROR,
 	CRITICAL
-};
-
-struct LogStatistics {
-	int InfoCount = 0;
-	int WarnCount = 0;
-	int ErrorCount = 0;
-	int CriticalCount = 0;
-	
-	#if _DEBUG
-	int DebugCount = 0;
-	#endif
 };

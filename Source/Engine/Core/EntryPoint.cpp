@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+#include "Core/StdAfx.h"
 
 #include "Engine.h"
 
@@ -19,7 +19,8 @@ int main(int argc, char* argv)
 
 	if (g_pApp == nullptr)
 	{
-		logger->Critical("Engine::GetApplication returned nullptr, define in client !");
+		logger->Critical("Engine::GetApplication() returned nullptr, define in client !");
+
 		SmallCleanup();
 		return 0;
 	}

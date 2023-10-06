@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Logger.h"
+#include "Application/BaseApplication.h"
 
 inline Logger* logger = new Logger();
 
