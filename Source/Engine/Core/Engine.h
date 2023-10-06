@@ -5,7 +5,7 @@
 
 inline Logger* logger = new Logger();
 
-inline RWEngine::BaseApplication* g_pApp; // defined in entry point
+inline RWEngine::BaseApplication* g_pApp = nullptr; // defined in entry point
 
 // RWEngine namespace for internal use,
 // Engine namespace for external use!

@@ -3,6 +3,7 @@
 #include "Engine.h"
 
 #include <DetectPlatform.h>
+#include <Assert.h>
 
 // Hide the command prompt pop-up in release mode
 #if IsWin()
@@ -17,9 +18,9 @@ int main(int argc, char* argv)
 {
 	g_pApp = Engine::GetApplication();
 
-	if (g_pApp == nullptr)
+	if (brAssert(g_pApp != nullptr, "Engine::GetApplication() is not defined!"))
 	{
-		logger->Critical("Engine::GetApplication() returned nullptr, define in client !");
+		logger->Error("Engine::GetApplication() is nullptr, define in client !");
 
 		SmallCleanup();
 		return 0;
