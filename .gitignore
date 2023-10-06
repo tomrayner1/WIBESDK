@@ -14,3 +14,6 @@
 
 # Generic OS files
 *.DS_Store
+
+# !!! HIDE THE BUILD FOLDER !!!
+Build/
