@@ -5,5 +5,6 @@
 
 RWEngine::BaseApplication* Engine::GetApplication()
 {
+//	brAssert(true, "Not yet implemented!");
 	return nullptr;
 }
