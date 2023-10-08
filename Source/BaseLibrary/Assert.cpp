@@ -14,9 +14,19 @@ bool brAssert(bool eval, const char* msg)
 	#endif
 
 	if (eval)
+	{
 		return false;
+	}
 
-	std::cout << "brAssert() called: " << msg << "\n";
+	if (msg == "")
+	{
+		std::cout << "brAssert() called!\n";
+	}
+	else
+	{
+		std::cout << "brAssert() called: " << msg << "\n";
+	}
+	
 
 	#if IsWin()
 	__debugbreak();
