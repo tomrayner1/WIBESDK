@@ -5,13 +5,22 @@
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+# Resource file
+*.aps
 
+# ## .rayware folder ## #
 # Hide this folder !
 .rayware/*
 
 # But keep the licenses
 !LICENSE.txt
 
+# Show the file icons
+!Editor.ico
+!Sandbox.ico
+!Logo1.psd
+
+# ## ## ## ## ## ## ## ##
 # Generic OS files
 *.DS_Store
 
