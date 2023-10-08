@@ -2,7 +2,7 @@
 .vs/
 
 # And files
-*.vcxproj
+#*.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
 # Resource file
