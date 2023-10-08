@@ -4,7 +4,10 @@
 #include <queue>
 
 // fwd declaration
-class Engine::Event;
+namespace Engine {
+	class Event;
+}
+
 
 namespace RWEngine {
 
