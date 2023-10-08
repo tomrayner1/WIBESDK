@@ -16,11 +16,10 @@
 !LICENSE.txt
 
 # Show the file icons
-!Editor.ico
-!Sandbox.ico
-!Logo1.psd
+!.rayware/Resources/
 
 # ## ## ## ## ## ## ## ##
+
 # Generic OS files
 *.DS_Store
 
