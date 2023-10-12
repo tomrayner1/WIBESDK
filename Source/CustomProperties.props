@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <BASELIB_DIR>$(SolutionDir)Source\Libraries\BaseLibrary;</BASELIB_DIR>
+    <FILESYSTEM_DIR>$(SolutionDir)Source\Libraries\Filesystem;</FILESYSTEM_DIR>
+    <FILESYSTEM_INCLUDE_DIRS>$(SolutionDir)Source\ThirdParty\minizip\include;$(SolutionDir)Source\ThirdParty\zlib\include;</FILESYSTEM_INCLUDE_DIRS>
+    <FILESYSTEM_LIB_DIRS>$(SolutionDir)Source\ThirdParty\zlib\zlib.lib;$(SolutionDir)Source\ThirdParty\minizip\libminizip.lib</FILESYSTEM_LIB_DIRS>
+    <RUNTIME_DIR>$(SolutionDir)Source\Runtime;</RUNTIME_DIR>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="BASELIB_DIR">
+      <Value>$(BASELIB_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FILESYSTEM_DIR">
+      <Value>$(FILESYSTEM_DIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FILESYSTEM_INCLUDE_DIRS">
+      <Value>$(FILESYSTEM_INCLUDE_DIRS)</Value>
+    </BuildMacro>
+    <BuildMacro Include="FILESYSTEM_LIB_DIRS">
+      <Value>$(FILESYSTEM_LIB_DIRS)</Value>
+    </BuildMacro>
+    <BuildMacro Include="RUNTIME_DIR">
+      <Value>$(RUNTIME_DIR)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
