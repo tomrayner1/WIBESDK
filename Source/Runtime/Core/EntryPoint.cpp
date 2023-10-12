@@ -5,6 +5,8 @@
 #include <DetectPlatform.h>
 #include <Assert.h>
 
+#include <VFS_Staging.h>
+
 // Hide the command prompt pop-up in release mode
 #if IsWin()
 # 	ifndef _DEBUG
@@ -16,6 +18,10 @@ void SmallCleanup();
 
 int main(int argc, char* argv)
 {
+	#if 1 // Testing 
+	FS_StagingOnly::dbgTryReadDebugFile();
+	return 0;
+	#endif
 	g_pApp = Engine::GetApplication();
 
 	if (brAssert(g_pApp != nullptr, "Engine::GetApplication() is not defined!"))
