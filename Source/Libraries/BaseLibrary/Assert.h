@@ -1,3 +1,4 @@
 #pragma once
 
-bool brAssert(bool eval, const char* msg = "");
+// Because writing brAssert(false) is dumb
+bool brAssert(bool eval = false, const char* msg = "");
