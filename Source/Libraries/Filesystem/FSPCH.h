@@ -1,4 +1,5 @@
 #pragma once
 
-#include <zconf.h>
 #include <zlib.h>
+#include <unzip.h>
+#include <zip.h>

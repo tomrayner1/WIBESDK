@@ -24,9 +24,10 @@ namespace FS_StagingOnly {
 		return;
 		#endif
 
-		unzFile zipf = unzOpen("test.zip");
+		unzFile zipf = unzOpen("test.wibe");
 
-		brAssert(zipf != 0, "Error unzipping test.zip!");
+		// BAD !
+		brAssert(zipf != NULL, "unzOpen() failed : Invalid path provided?");
 
 		int result = unzGoToFirstFile(zipf);
 
