@@ -4,8 +4,8 @@
   <PropertyGroup Label="UserMacros">
     <BASELIB_DIR>$(SolutionDir)Source\Libraries\BaseLibrary;</BASELIB_DIR>
     <FILESYSTEM_DIR>$(SolutionDir)Source\Libraries\Filesystem;</FILESYSTEM_DIR>
-    <FILESYSTEM_INCLUDE_DIRS>$(SolutionDir)Source\ThirdParty\minizip\include;$(SolutionDir)Source\ThirdParty\zlib\include;</FILESYSTEM_INCLUDE_DIRS>
-    <FILESYSTEM_LIB_DIRS>$(SolutionDir)Source\ThirdParty\zlib\zlib.lib;$(SolutionDir)Source\ThirdParty\minizip\libminizip.lib</FILESYSTEM_LIB_DIRS>
+    <FILESYSTEM_INCLUDE_DIRS>$(SolutionDir)Source\ThirdParty\zlib\include;$(SolutionDir)Source\ThirdParty\minizip\include;</FILESYSTEM_INCLUDE_DIRS>
+    <FILESYSTEM_LIB_DIRS>$(SolutionDir)Source\ThirdParty\bzip\bzip2.lib;$(SolutionDir)Source\ThirdParty\liblzma\liblzma.lib;$(SolutionDir)Source\ThirdParty\minizip\libminizip.lib;$(SolutionDir)Source\ThirdParty\zlib\zlibstatic.lib;$(SolutionDir)Source\ThirdParty\zstd\zstd_static.lib;bcrypt.lib;</FILESYSTEM_LIB_DIRS>
     <RUNTIME_DIR>$(SolutionDir)Source\Runtime;</RUNTIME_DIR>
   </PropertyGroup>
   <PropertyGroup />

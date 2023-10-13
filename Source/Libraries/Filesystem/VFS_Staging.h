@@ -4,6 +4,11 @@
 #include <iostream>
 #include <Assert.h>
 
+//#ifdef IsWin()
+//#	include <windows.h>
+//#	include <bcrypt.h>
+//#endif
+
 /*
 	This namespace should be used for testing purposes only !
 

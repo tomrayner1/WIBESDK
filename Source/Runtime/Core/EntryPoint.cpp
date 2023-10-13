@@ -18,10 +18,16 @@ void SmallCleanup();
 
 int main(int argc, char* argv)
 {
-	#if 1 // Testing 
+	#if 1
+	/////////////////////////////////////////////
+	/// Staging code, remove!
+
 	FS_StagingOnly::dbgTryReadDebugFile();
+
 	return 0;
+	/////////////////////////////////////////////
 	#endif
+
 	g_pApp = Engine::GetApplication();
 
 	if (brAssert(g_pApp != nullptr, "Engine::GetApplication() is not defined!"))
