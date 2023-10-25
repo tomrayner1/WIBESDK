@@ -1,15 +1,8 @@
 #pragma once
 
+#include "ApplicationRequirements.h"
+
 namespace Engine {
-	
-	struct ApplicationRequirements
-	{
-		bool FileSystem = false;
-	};
-
-}
-
-namespace RWEngine {
 
 	class BaseApplication
 	{
@@ -18,9 +11,10 @@ namespace RWEngine {
 		virtual ~BaseApplication();
 
 		void Quit();
-	private:
+	public:
 		Engine::ApplicationRequirements m_Requirements;
 
+	private:
 		bool m_Running;
 	};
 

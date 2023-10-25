@@ -5,7 +5,7 @@
 
 inline Logger* logger = new Logger();
 
-inline RWEngine::BaseApplication* g_pApp = nullptr; // defined in entry point
+inline Engine::BaseApplication* g_pApp = nullptr; // defined in entry point
 
 // RWEngine namespace for internal use,
 // Engine namespace for external use!
@@ -17,6 +17,6 @@ namespace RWEngine {
 
 namespace Engine {
 
-	extern RWEngine::BaseApplication* GetApplication();
+	extern Engine::BaseApplication* GetApplication();
 
 }

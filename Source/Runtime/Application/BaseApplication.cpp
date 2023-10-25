@@ -1,12 +1,11 @@
 #include "Core/StdAfx.h"
 #include "BaseApplication.h"
 
-namespace RWEngine {
+namespace Engine {
 
 	BaseApplication::BaseApplication()
 		: m_Running(true)
 	{
-
 	}
 
 	BaseApplication::~BaseApplication()
