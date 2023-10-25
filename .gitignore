@@ -1,27 +1,11 @@
-# Visual studio folder
+# Visual studio
 .vs/
-
-# And files
-#*.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
-# Resource file
 *.aps
 
-# ## .rayware folder ## #
-# Hide this folder !
-.rayware/*
-
-# But keep the licenses
-!LICENSE.txt
-
-# Show the file icons
-!.rayware/Resources/
-
-# ## ## ## ## ## ## ## ##
-
-# Generic OS files
+# mac OS
 *.DS_Store
 
-# !!! HIDE THE BUILD FOLDER !!!
+# Build folder
 Build/
