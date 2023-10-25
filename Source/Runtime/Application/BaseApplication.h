@@ -14,7 +14,7 @@ namespace RWEngine {
 	class BaseApplication
 	{
 	public:
-		BaseApplication(Engine::ApplicationRequirements requirements);
+		BaseApplication();
 		virtual ~BaseApplication();
 
 		void Quit();

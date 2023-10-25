@@ -3,8 +3,8 @@
 
 namespace RWEngine {
 
-	BaseApplication::BaseApplication(Engine::ApplicationRequirements require)
-		: m_Requirements(require), m_Running(true)
+	BaseApplication::BaseApplication()
+		: m_Running(true)
 	{
 
 	}
