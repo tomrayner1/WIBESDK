@@ -164,23 +164,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Application\2DEngineApplication.h" />
+    <ClInclude Include="Application\ApplicationRequirements.h" />
     <ClInclude Include="Application\BaseApplication.h" />
     <ClInclude Include="Core\Engine.h" />
     <ClInclude Include="Events\Event.h" />
     <ClInclude Include="Core\Logger.h" />
     <ClInclude Include="Core\StdAfx.h" />
-    <ClInclude Include="Application\3DEngineApplication.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Application\2DEngineApplication.cpp" />
     <ClCompile Include="Application\BaseApplication.cpp" />
     <ClCompile Include="Core\Engine.cpp" />
     <ClCompile Include="Core\EntryPoint.cpp" />
     <ClCompile Include="Events\Event.cpp" />
     <ClCompile Include="Core\Logger.cpp" />
     <ClCompile Include="Core\StdAfx.cpp" />
-    <ClCompile Include="Application\3DEngineApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BaseLibrary\BaseLibrary.vcxproj">
