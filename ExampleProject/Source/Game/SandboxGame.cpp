@@ -1,9 +1,9 @@
 #include "SandboxGame.h"
 
 #include <Core/Engine.h>
-#include <Application/3DEngineApplication.h>
+#include <Application/BaseApplication.h>
 
-RWEngine::BaseApplication* Engine::GetApplication()
+Engine::BaseApplication* Engine::GetApplication()
 {
 //	brAssert(true, "Not yet implemented!");
 	return nullptr;
