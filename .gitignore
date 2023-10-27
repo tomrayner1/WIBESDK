@@ -8,4 +8,4 @@
 *.DS_Store
 
 # Build folder
-Build/
+/Build/
