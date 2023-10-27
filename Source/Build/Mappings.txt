@@ -1,0 +1,20 @@
+;These are the mappings for premake project generation
+;Found from https://premake.github.io/docs/Using-Premake
+;
+; "Comments" are needed for the python script in project root.
+;
+; 	key: description
+;
+vs2022: Visual Studio 2022
+vs2019: Visual Studio 2019
+vs2017: Visual Studio 2017
+vs2015: Visual Studio 2015
+vs2013: Visual Studio 2013
+vs2012: Visual Studio 2012
+vs2010: Visual Studio 2010
+vs2008: Visual Studio 2008
+vs2005: Visual Studio 2005
+gmake: GNU Makefiles (Deprecated generator)
+gmake2: GNU Makefiles (With Cygwin & MinGW)
+xcode4: XCode
+codelite: CodeLite
