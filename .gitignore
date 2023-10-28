@@ -1,5 +1,10 @@
+# Visual studio code
+.vscode/
+
 # Visual studio
 .vs/
+*.sln
+*.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
 *.aps
@@ -8,4 +13,4 @@
 *.DS_Store
 
 # Build folder
-Build/
+/Build/
