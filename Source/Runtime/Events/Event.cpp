@@ -2,10 +2,15 @@
 
 #include "Event.h"
 
-namespace RWEngine {
-
-}
-
 namespace Engine {
 
+	std::string Event::ToString() const
+	{
+		return this->GetName();
+	}
+
+	bool Event::InCategory(std::string categoryName)
+	{
+		return this->GetType().Category == categoryName;
+	}
 }

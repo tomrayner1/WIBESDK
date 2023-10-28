@@ -6,6 +6,8 @@
 // fwd declaration
 namespace Engine {
 	class Event;
+
+	struct EventType;
 }
 
 
@@ -19,18 +21,21 @@ namespace RWEngine {
 
 namespace Engine {
 
+	struct EventType
+	{
+		std::string		Name;
+		std::string Category;
+	};
+
 	class Event 
 	{
 	public:
-
-		virtual const char* GetName() = 0;
+		virtual EventType GetType() const = 0;
 
 		virtual std::string ToString() const;
 
-		bool IsHandled();
-		void SetHandled(bool val);
-
-	private:
+		inline bool InCategory(std::string categoryName);
+	protected:
 		bool m_Handled = false;
 	};
 
