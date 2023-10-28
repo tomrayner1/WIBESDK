@@ -1,3 +1,6 @@
+# Visual studio code
+.vscode/
+
 # Visual studio
 .vs/
 *.vcxproj.filters
