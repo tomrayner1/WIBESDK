@@ -19,28 +19,6 @@ void SmallCleanup();
 
 int main(int argc, char* argv)
 {
-	#if 1
-	/////////////////////////////////////////////
-	/// Staging code, remove!
-
-	//FS_StagingOnly::dbgTryReadDebugFile();
-	//std::cout << "\n\n\n";
-
-	VFS::IndexZippedFile("test.wibe");
-
-	std::vector<uint8_t> buffer; // vector of bytes
-
-	VFS::Read("folder/as1.txt", buffer);
-
-	const char* data = reinterpret_cast<const char*>(buffer.data()); // cast vector of bytes to char[]
-
-	std::cout << "folder/as1.txt: \n" << data << "\n";
-	VFS::Cleanup();
-
-	return 0;
-	/////////////////////////////////////////////
-	#endif
-
 	g_pApp = Engine::GetApplication();
 
 	if (brAssert(g_pApp != nullptr, "Engine::GetApplication() is not defined!"))
@@ -68,3 +46,27 @@ void SmallCleanup()
 	
 	delete logger;
 }
+
+/*
+
+	/////////////////////////////////////////////
+	/// Staging code, remove!
+
+	//FS_StagingOnly::dbgTryReadDebugFile();
+	//std::cout << "\n\n\n";
+
+	VFS::IndexZippedFile("test.wibe");
+
+	std::vector<uint8_t> buffer; // vector of bytes
+
+	VFS::Read("folder/as1.txt", buffer);
+
+	const char* data = reinterpret_cast<const char*>(buffer.data()); // cast vector of bytes to char[]
+
+	std::cout << "folder/as1.txt: \n" << data << "\n";
+	VFS::Cleanup();
+
+	return 0;
+	/////////////////////////////////////////////
+
+*/
