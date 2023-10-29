@@ -5,8 +5,8 @@
 #include <DetectPlatform.h>
 #include <Assert.h>
 
-#include <VFS_Staging.h>
-#include <VFS.h>
+//#include <VFS_Staging.h>
+//#include <VFS.h>
 
 // Hide the command prompt pop-up in release mode
 #if IsWin()
