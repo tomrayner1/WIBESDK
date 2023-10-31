@@ -9,6 +9,8 @@
 *.vcxproj.user
 *.aps
 
+Makefile
+
 # mac OS
 *.DS_Store
 
