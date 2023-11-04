@@ -26,6 +26,10 @@ project "Runtime"
 		"%{Libraries.GLFW}"
 	}
 
+	defines {
+		"GLFW_INCLUDE_NONE"
+	}
+
 Includes["Runtime"] = "%{SourceFolder}/Runtime/"
 
 project "Editor"
