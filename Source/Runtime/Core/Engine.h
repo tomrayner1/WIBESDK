@@ -7,10 +7,10 @@ inline Logger* logger = new Logger();
 
 inline Engine::BaseApplication* g_pApp = nullptr; // defined in entry point
 
-// RWEngine namespace for internal use,
+// Runtime namespace for internal use,
 // Engine namespace for external use!
 
-namespace RWEngine {
+namespace Runtime {
 }
 
 #include "Application/BaseApplication.h"

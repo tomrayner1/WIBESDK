@@ -2,51 +2,55 @@
 
 #include <string>
 
-enum LogLevel;
+namespace Runtime {
 
-struct LogStatistics {
-	int InfoCount = 0;
-	int WarnCount = 0;
-	int ErrorCount = 0;
-	int CriticalCount = 0;
+	enum LogLevel;
 
-	#if _DEBUG
-	int DebugCount = 0;
-	#endif
-};
+	struct LogStatistics {
+		int InfoCount = 0;
+		int WarnCount = 0;
+		int ErrorCount = 0;
+		int CriticalCount = 0;
 
-class Logger {
-public:
-	Logger();
-	~Logger();
+		#if _DEBUG
+		int DebugCount = 0;
+		#endif
+	};
 
-	void SetPrefix(std::string prefix);
-	void SetLevel(LogLevel level);
+	class Logger {
+	public:
+		Logger();
+		~Logger();
 
-	void ResetPrefix();
+		void SetPrefix(std::string prefix);
+		void SetLevel(LogLevel level);
 
-	void Info(std::string msg);
-	void Warn(std::string msg);
-	void Error(std::string msg);
-	void Critical(std::string msg);
+		void ResetPrefix();
 
-	void Msg(std::string msg);
-	void Debug(std::string msg);
+		void Info(std::string msg);
+		void Warn(std::string msg);
+		void Error(std::string msg);
+		void Critical(std::string msg);
 
-private: // functions
-	std::string GetPrefix();
+		void Msg(std::string msg);
+		void Debug(std::string msg);
 
-private:
-	LogLevel m_CurrentLevel;
+	private: // functions
+		std::string GetPrefix();
 
-	std::string m_CurrentPrefix;
+	private:
+		LogLevel m_CurrentLevel;
 
-	LogStatistics m_LoggingStatistics;
-};
+		std::string m_CurrentPrefix;
 
-enum LogLevel {
-	INFO,
-	WARN,
-	ERROR,
-	CRITICAL
-};
+		LogStatistics m_LoggingStatistics;
+	};
+
+	enum LogLevel {
+		INFO,
+		WARN,
+		ERROR,
+		CRITICAL
+	};
+
+}
