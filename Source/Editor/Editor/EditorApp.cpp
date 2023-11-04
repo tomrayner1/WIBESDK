@@ -13,13 +13,25 @@ Engine::BaseApplication* Engine::GetApplication()
 //
 EditorApp::EditorApp()
 {
-	Engine::ApplicationRequirements requirements = Engine::ApplicationRequirements{};
-
-	requirements.FileSystem = true;
-
-	this->m_Requirements = requirements;
 }
 
 EditorApp::~EditorApp()
 {
+}
+
+//
+// Props
+//
+Engine::ApplicationProperties EditorApp::GetProps() const
+{
+	Engine::ApplicationRequirements req = Engine::ApplicationRequirements{};
+	
+	req.FileSystem = true;
+
+	Engine::ApplicationProperties props = {
+		"Editor",
+		req
+	};
+	
+	return props;
 }

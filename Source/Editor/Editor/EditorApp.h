@@ -8,5 +8,7 @@ class EditorApp : public Engine::BaseApplication
 public:
 	EditorApp();
 	~EditorApp();
+
+	Engine::ApplicationProperties GetProps() const;
 };
 

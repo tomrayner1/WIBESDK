@@ -1,6 +1,6 @@
 #pragma once
 
-#include "ApplicationRequirements.h"
+#include "ApplicationProperties.h"
 
 namespace Engine {
 
@@ -11,9 +11,8 @@ namespace Engine {
 		virtual ~BaseApplication();
 
 		void Quit();
-	public:
-		Engine::ApplicationRequirements m_Requirements;
 
+		virtual Engine::ApplicationProperties GetProps() const = 0;
 	private:
 		bool m_Running;
 	};
