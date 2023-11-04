@@ -16,12 +16,14 @@ project "Runtime"
 		"%{Includes.BaseLibrary}",
 		"%{Includes.FileSystem}",
 		"%{Includes.minizip}",
-		"%{Includes.zlib}"
+		"%{Includes.zlib}",
+		"%{Includes.GLFW}"
 	}
 
 	links {
 		"BaseLibrary",
-		"FileSystem"
+		"FileSystem",
+		"%{Libraries.GLFW}"
 	}
 
 Includes["Runtime"] = "%{SourceFolder}/Runtime/"
@@ -42,7 +44,8 @@ project "Editor"
 		"%{SourceFolder}/Editor/",
 		"%{Includes.BaseLibrary}",
 		"%{Includes.FileSystem}",
-		"%{Includes.Runtime}"
+		"%{Includes.Runtime}",
+		"%{Includes.GLFW}"
 	}
 
 	links {

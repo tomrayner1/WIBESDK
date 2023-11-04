@@ -10,6 +10,13 @@ Libraries = {}
 Libraries["bzip2"] = "%{ThirdPartyDir}/bzip2/bzip2.lib"
 
 --[[
+	GLFW
+]]
+
+Includes["GLFW"] = "%{ThirdPartyDir}/GLFW/include/"
+Libraries["GLFW"] = "%{ThirdPartyDir}/GLFW/glfw3.lib"
+
+--[[
 	liblzma
 ]]
 
