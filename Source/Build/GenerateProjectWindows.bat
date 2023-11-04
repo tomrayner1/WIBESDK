@@ -21,7 +21,7 @@ goto done
 @rem all paths are from the project root
 @rem
 :fromScript
-Source\ThirdParty\premake\bin\premake5.exe --file=Source/Build/Scripts/premake5.lua %arg1%
+Source\ThirdParty\Premake5\bin\premake5.exe --file=Source/Build/Scripts/premake5.lua %arg1%
 goto done
 
 @rem
@@ -29,7 +29,7 @@ goto done
 @rem
 :fromDir
 cd ..\
-cd ThirdParty\premake\bin
+cd ThirdParty\Premake5\bin
 
 premake5 --file=../../../Build/Scripts/premake5.lua %arg1%
 
