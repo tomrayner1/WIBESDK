@@ -3,7 +3,7 @@
 #include "Logger.h"
 #include "Application/BaseApplication.h"
 
-inline Logger* logger = new Logger();
+inline Runtime::Logger* logger = new Runtime::Logger();
 
 inline Engine::BaseApplication* g_pApp = nullptr; // defined in entry point
 
