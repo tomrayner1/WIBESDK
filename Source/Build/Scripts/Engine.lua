@@ -38,6 +38,8 @@ project "Editor"
 	language "C++"
 	cppdialect "C++20"
 
+	debugdir "%{TargetPath}"
+
 	files {
 		"%{SourceFolder}/Editor/**.h",
 		"%{SourceFolder}/Editor/**.cpp",
