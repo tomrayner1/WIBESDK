@@ -23,6 +23,7 @@ int main(int argc, char* argv)
 	{
 		Engine::g_ShouldRestartProgram = false;
 
+		Runtime::StartCore();
 		g_pApp = Engine::GetApplication();
 
 		if (brAssert(g_pApp != nullptr, "Engine::GetApplication() is not defined!"))
@@ -31,10 +32,11 @@ int main(int argc, char* argv)
 		}
 		else
 		{
-
+			g_pApp->Run();
 		}
 
 		SmallCleanup();
+		Runtime::StopCore();
 	}
 
 	return 0;
