@@ -11,6 +11,10 @@ inline Engine::BaseApplication* g_pApp = nullptr; // defined in entry point
 // Engine namespace for external use!
 
 namespace Runtime {
+
+	void StartCore();
+	void StopCore();
+
 }
 
 #include "Application/BaseApplication.h"
