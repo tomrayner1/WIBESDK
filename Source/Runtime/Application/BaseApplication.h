@@ -2,19 +2,27 @@
 
 #include "ApplicationProperties.h"
 
+#include "Window/RuntimeWindow.h"
+
+#include <memory>
+
 namespace Engine {
 
 	class BaseApplication
 	{
 	public:
-		BaseApplication();
+		BaseApplication(const Engine::ApplicationProperties& props);
 		virtual ~BaseApplication();
 
+		void Run();
 		void Quit();
 
-		virtual Engine::ApplicationProperties GetProps() const = 0;
+		const Engine::ApplicationProperties& GetProps() const;
 	private:
+		Engine::ApplicationProperties m_Props;
 		bool m_Running;
+
+		std::unique_ptr<RuntimeWindow> m_RuntimeWindow;
 	};
 
 }
