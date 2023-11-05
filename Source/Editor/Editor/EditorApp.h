@@ -6,9 +6,7 @@
 class EditorApp : public Engine::BaseApplication
 {
 public:
-	EditorApp();
+	EditorApp(const Engine::ApplicationProperties& props);
 	~EditorApp();
-
-	Engine::ApplicationProperties GetProps() const;
 };
 
