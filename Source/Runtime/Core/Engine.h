@@ -19,4 +19,6 @@ namespace Engine {
 
 	extern Engine::BaseApplication* GetApplication();
 
+	inline bool g_ShouldRestartProgram = true;
+
 }
