@@ -21,12 +21,25 @@ namespace Engine {
 
 	void BaseApplication::Run()
 	{
+		while (m_Running)
+		{
 
+		}
 	}
 
 	void BaseApplication::Quit()
 	{
 		m_Running = false;
+	}
+
+	void BaseApplication::PushLayer(Runtime::Layer* layer)
+	{
+		m_LayerStack.PushLayer(layer);
+	}
+
+	void BaseApplication::PushOverlay(Runtime::Layer* overlay)
+	{
+		m_LayerStack.PushOverlay(overlay);
 	}
 
 	const Engine::ApplicationProperties& BaseApplication::GetProps() const
