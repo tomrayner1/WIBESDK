@@ -13,4 +13,9 @@ namespace Engine {
 	{
 		return this->GetType().Category == categoryName;
 	}
+
+	bool Event::IsHandled()
+	{
+		return m_Handled;
+	}
 }

@@ -35,6 +35,8 @@ namespace Engine {
 		virtual std::string ToString() const;
 
 		inline bool InCategory(std::string categoryName);
+
+		bool IsHandled();
 	protected:
 		bool m_Handled = false;
 	};
