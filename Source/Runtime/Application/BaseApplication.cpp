@@ -1,7 +1,7 @@
 #include "Core/StdAfx.h"
 #include "BaseApplication.h"
-
 #include "ApplicationProperties.h"
+#include "Layers/Layer.h"
 
 namespace Engine {
 
@@ -23,7 +23,12 @@ namespace Engine {
 	{
 		while (m_Running)
 		{
-
+			for (Runtime::Layer* layer : m_LayerStack)
+			{
+				layer->OnFrame();
+			}
+			
+			m_RuntimeWindow->Update();
 		}
 	}
 
@@ -40,6 +45,19 @@ namespace Engine {
 	void BaseApplication::PushOverlay(Runtime::Layer* overlay)
 	{
 		m_LayerStack.PushOverlay(overlay);
+	}
+
+	void BaseApplication::OnEvent(Event& event)
+	{
+		for (auto layer = m_LayerStack.end(); layer != m_LayerStack.begin();)
+		{
+			(*--layer)->OnEvent(event);
+
+			if (event.IsHandled())
+			{
+				break;
+			}
+		}
 	}
 
 	const Engine::ApplicationProperties& BaseApplication::GetProps() const

@@ -21,6 +21,8 @@ namespace Engine {
 		void PushLayer(Runtime::Layer* layer);
 		void PushOverlay(Runtime::Layer* overlay);
 
+		void OnEvent(Event& event);
+
 		const Engine::ApplicationProperties& GetProps() const;
 	private:
 		Engine::ApplicationProperties m_Props;
