@@ -30,4 +30,9 @@ namespace Engine {
 		}
 	}
 
+	void RuntimeWindow::Update()
+	{
+
+	}
+
 }

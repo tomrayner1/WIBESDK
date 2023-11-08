@@ -24,6 +24,8 @@ namespace Engine {
 	public:
 		RuntimeWindow(WindowProperties& props);
 		~RuntimeWindow();
+
+		void Update();
 	private:
 		WindowProperties& m_Props;
 		GLFWwindow* m_Window;
