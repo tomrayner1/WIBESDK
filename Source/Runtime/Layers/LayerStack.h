@@ -12,17 +12,17 @@ namespace Runtime {
 		LayerStack();
 		~LayerStack();
 
-		void PushLayer(Layer* layer);
-		void PopLayer(Layer* layer);
+		void PushLayer(Engine::Layer* layer);
+		void PopLayer(Engine::Layer* layer);
 
-		void PushOverlay(Layer* overlay);
-		void PopOverlay(Layer* overlay);
+		void PushOverlay(Engine::Layer* overlay);
+		void PopOverlay(Engine::Layer* overlay);
 
-		std::vector<Layer*>::iterator begin();
-		std::vector<Layer*>::iterator end();
+		std::vector<Engine::Layer*>::iterator begin();
+		std::vector<Engine::Layer*>::iterator end();
 	private:
-		std::vector<Layer*> m_Layers;
-		std::vector<Layer*>::iterator m_LayerInsert;
+		std::vector<Engine::Layer*> m_Layers;
+		std::vector<Engine::Layer*>::iterator m_LayerInsert;
 	};
 
 }

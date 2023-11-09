@@ -18,8 +18,8 @@ namespace Engine {
 		void Run();
 		void Quit();
 
-		void PushLayer(Runtime::Layer* layer);
-		void PushOverlay(Runtime::Layer* overlay);
+		void PushLayer(Engine::Layer* layer);
+		void PushOverlay(Engine::Layer* overlay);
 
 		void OnEvent(Event& event);
 

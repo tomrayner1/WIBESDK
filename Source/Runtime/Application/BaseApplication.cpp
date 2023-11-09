@@ -23,7 +23,7 @@ namespace Engine {
 	{
 		while (m_Running)
 		{
-			for (Runtime::Layer* layer : m_LayerStack)
+			for (Engine::Layer* layer : m_LayerStack)
 			{
 				layer->OnFrame();
 			}
@@ -37,12 +37,12 @@ namespace Engine {
 		m_Running = false;
 	}
 
-	void BaseApplication::PushLayer(Runtime::Layer* layer)
+	void BaseApplication::PushLayer(Engine::Layer* layer)
 	{
 		m_LayerStack.PushLayer(layer);
 	}
 
-	void BaseApplication::PushOverlay(Runtime::Layer* overlay)
+	void BaseApplication::PushOverlay(Engine::Layer* overlay)
 	{
 		m_LayerStack.PushOverlay(overlay);
 	}
