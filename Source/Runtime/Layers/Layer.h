@@ -11,9 +11,9 @@ namespace Engine {
 	public:
 		#ifdef _DEBUG
 		Layer(const std::string& name = "Layer");
-		#else
-		Layer();
 		#endif
+		Layer();
+		
 		virtual ~Layer();
 
 		virtual void OnAttach() {}
@@ -24,10 +24,7 @@ namespace Engine {
 		virtual void OnEvent(Engine::Event& event) {}
 		
 		#ifdef _DEBUG
-		inline const std::string& GetName() const
-		{
-			return m_Name;
-		}
+		inline const std::string& GetName() const;
 	private:
 		std::string m_Name;
 		#endif

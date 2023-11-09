@@ -11,14 +11,17 @@ namespace Engine {
 	{
 	}
 
-	#else
+	inline const std::string& Layer::GetName() const
+	{
+		return m_Name;
+	}
+
+	#endif
 
 	Layer::Layer()
 		: m_Enabled(true)
 	{
 	}
-
-	#endif
 
 	Layer::~Layer()
 	{
