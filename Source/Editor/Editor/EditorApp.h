@@ -8,5 +8,8 @@ class EditorApp : public Engine::BaseApplication
 public:
 	EditorApp(const Engine::ApplicationProperties& props);
 	~EditorApp();
+
+private:
+	EditorLayer m_EditorLayer;
 };
 

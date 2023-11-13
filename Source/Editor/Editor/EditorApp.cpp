@@ -1,5 +1,7 @@
 #include "EditorApp.h"
 
+#include "EditorLayer.h"
+
 //
 // Entry point
 //
@@ -21,8 +23,9 @@ Engine::BaseApplication* Engine::GetApplication()
 // Constructor
 //
 EditorApp::EditorApp(const Engine::ApplicationProperties& props)
-	: Engine::BaseApplication(props)
+	: Engine::BaseApplication(props), m_EditorLayer(EditorLayer())
 {
+	PushLayer(m_EditorLayer);
 }
 
 EditorApp::~EditorApp()
