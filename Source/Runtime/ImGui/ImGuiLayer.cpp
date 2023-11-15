@@ -5,7 +5,9 @@
 namespace RW {
 
 	ImGuiLayer::ImGuiLayer()
+		#ifdef _DEBUG
 		: Layer("ImGuiLayer")
+		#endif
 	{
 	}
 
