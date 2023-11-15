@@ -18,7 +18,8 @@ project "Runtime"
 		"%{Includes.minizip}",
 		"%{Includes.zlib}",
 		"%{Includes.GLFW}",
-		"%{Includes.imgui}"
+		"%{Includes.imgui}",
+		"%{Includes.yaml}"
 	}
 
 	links {
@@ -28,8 +29,21 @@ project "Runtime"
 	}
 
 	defines {
-		"GLFW_INCLUDE_NONE"
+		"GLFW_INCLUDE_NONE",
+		"YAML_CPP_STATIC_DEFINE"
 	}
+
+	filter "configurations:Debug"
+		links {
+			"%{Libraries.yaml_d}"
+		}
+	
+	filter "configurations:not Debug"
+		links {
+			"%{Libraries.yaml}"
+		}
+	
+	filter ""
 
 Includes["Runtime"] = "%{SourceFolder}/Runtime/"
 
@@ -52,7 +66,8 @@ project "Editor"
 		"%{Includes.BaseLibrary}",
 		"%{Includes.FileSystem}",
 		"%{Includes.Runtime}",
-		"%{Includes.GLFW}"
+		"%{Includes.GLFW}",
+		"%{Includes.yaml}"
 	}
 
 	links {
@@ -60,6 +75,18 @@ project "Editor"
 		"FileSystem",
 		"Runtime"
 	}
+
+	filter "configurations:Debug"
+		links {
+			"%{Libraries.yaml_d}"
+		}
+	
+	filter "configurations:not Debug"
+		links {
+			"%{Libraries.yaml}"
+		}
+	
+	filter ""
 
 	addResource("Editor")
 

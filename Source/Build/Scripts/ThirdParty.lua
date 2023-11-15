@@ -36,6 +36,14 @@ Includes["minizip"] = "%{ThirdPartyDir}/minizip/include/"
 Libraries["minizip"] = "%{ThirdPartyDir}/minizip/libminizip.lib"
 
 --[[
+	yaml-cpp
+]]
+
+Includes["yaml"] = "%{ThirdPartyDir}/yaml-cpp/include/"
+Libraries["yaml"] = "%{ThirdPartyDir}/yaml-cpp/yaml-cpp.lib"
+Libraries["yaml_d"] = "%{ThirdPartyDir}/yaml-cpp/yaml-cppd.lib"
+
+--[[
 	zlib
 ]]
 
