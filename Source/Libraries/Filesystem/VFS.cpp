@@ -1,7 +1,7 @@
 #include "FSPCH.h"
 
 #include "VFS.h"
-#include <Assert.h>
+#include <BaseAssert.h>
 
 #include <iostream>
 

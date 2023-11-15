@@ -3,7 +3,7 @@
 #include "Engine.h"
 
 #include <DetectPlatform.h>
-#include <Assert.h>
+#include <BaseAssert.h>
 
 //#include <VFS_Staging.h>
 //#include <VFS.h>
