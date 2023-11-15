@@ -19,6 +19,8 @@ namespace Engine {
 			m_ErrorDuringCreation = true;
 			return;
 		}
+
+		SetVSync(true);
 	}
 
 	RuntimeWindow::~RuntimeWindow()
@@ -33,6 +35,20 @@ namespace Engine {
 	void RuntimeWindow::Update()
 	{
 		glfwPollEvents();
+	}
+
+	void RuntimeWindow::SetVSync(bool vsync)
+	{
+		if (vsync)
+		{
+			glfwSwapInterval(1);
+		}
+		else
+		{
+			glfwSwapInterval(0);
+		}
+
+		m_VSync = vsync;
 	}
 
 }

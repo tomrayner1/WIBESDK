@@ -26,13 +26,15 @@ namespace Engine {
 		~RuntimeWindow();
 
 		void Update();
+
+		void SetVSync(bool vsync);
 	private:
 		WindowProperties& m_Props;
 		GLFWwindow* m_Window;
 
 		bool m_ErrorDuringCreation = false;
 
-		bool m_Vsync = false;
+		bool m_VSync = true;
 		WindowDisplayType m_WindowDisplayType = WINDOWED;
 	};
 
