@@ -2,10 +2,13 @@
 
 #include <Layers/Layer.h>
 
-class EditorLayer : Engine::Layer
+class EditorLayer : public Engine::Layer
 {
+public:
+	EditorLayer();
+	~EditorLayer();
 
-
+private:
 
 };
 

@@ -25,7 +25,7 @@ Engine::BaseApplication* Engine::GetApplication()
 EditorApp::EditorApp(const Engine::ApplicationProperties& props)
 	: Engine::BaseApplication(props), m_EditorLayer(EditorLayer())
 {
-	PushLayer(m_EditorLayer);
+	PushLayer(&m_EditorLayer);
 }
 
 EditorApp::~EditorApp()
