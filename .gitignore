@@ -25,3 +25,6 @@ Makefile
 
 # Build folder
 /Build/
+
+# Generator
+/GenerationPreferences.txt
