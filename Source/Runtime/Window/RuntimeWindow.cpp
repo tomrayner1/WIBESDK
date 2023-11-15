@@ -2,7 +2,7 @@
 
 #include "RuntimeWindow.h"
 
-namespace Engine {
+namespace RW {
 
 	RuntimeWindow::RuntimeWindow(WindowProperties& props)
 		: m_Props(props)

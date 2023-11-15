@@ -19,16 +19,16 @@ void SmallCleanup();
 
 int main(int argc, char* argv)
 {
-	while (Engine::g_ShouldRestartProgram)
+	while (RW::g_ShouldRestartProgram)
 	{
-		Engine::g_ShouldRestartProgram = false;
+		RW::g_ShouldRestartProgram = false;
 
-		Runtime::StartCore();
-		g_pApp = Engine::GetApplication();
+		RW::StartCore();
+		g_pApp = RW::GetApplication();
 
-		if (brAssert(g_pApp != nullptr, "Engine::GetApplication() is not defined!"))
+		if (brAssert(g_pApp != nullptr, "GetApplication() is not defined!"))
 		{
-			logger->Error("Engine::GetApplication() is nullptr, define in client !");
+			logger->Error("GetApplication() is nullptr, define in client !");
 		}
 		else
 		{
@@ -36,7 +36,7 @@ int main(int argc, char* argv)
 		}
 
 		SmallCleanup();
-		Runtime::StopCore();
+		RW::StopCore();
 	}
 
 	return 0;

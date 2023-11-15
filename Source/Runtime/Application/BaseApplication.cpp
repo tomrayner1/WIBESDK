@@ -3,9 +3,9 @@
 #include "ApplicationProperties.h"
 #include "Layers/Layer.h"
 
-namespace Engine {
+namespace RW {
 
-	BaseApplication::BaseApplication(const Engine::ApplicationProperties& props)
+	BaseApplication::BaseApplication(const ApplicationProperties& props)
 		: m_Running(true), m_Props(props)
 	{
 		WindowProperties wndProps = {};
@@ -23,14 +23,14 @@ namespace Engine {
 	{
 		while (m_Running)
 		{
-			while (!Runtime::g_EventQueue.empty())
+			while (!g_EventQueue.empty())
 			{
-				Event* event = Runtime::g_EventQueue.front();
+				Event* event = g_EventQueue.front();
 
 				//OnEvent(&(Event)event);
 			}
 
-			for (Engine::Layer* layer : m_LayerStack)
+			for (Layer* layer : m_LayerStack)
 			{
 				layer->OnFrame();
 			}
@@ -44,13 +44,13 @@ namespace Engine {
 		m_Running = false;
 	}
 
-	void BaseApplication::PushLayer(Engine::Layer* layer)
+	void BaseApplication::PushLayer(Layer* layer)
 	{
 		m_LayerStack.PushLayer(layer);
 		layer->OnAttach();
 	}
 
-	void BaseApplication::PushOverlay(Engine::Layer* overlay)
+	void BaseApplication::PushOverlay(Layer* overlay)
 	{
 		m_LayerStack.PushOverlay(overlay);
 		overlay->OnAttach();
@@ -69,7 +69,7 @@ namespace Engine {
 		}
 	}
 
-	const Engine::ApplicationProperties& BaseApplication::GetProps() const
+	const ApplicationProperties& BaseApplication::GetProps() const
 	{
 		return m_Props;
 	}

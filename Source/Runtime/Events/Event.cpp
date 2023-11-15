@@ -2,7 +2,7 @@
 
 #include "Event.h"
 
-namespace Engine {
+namespace RW {
 
 	std::string Event::ToString() const
 	{

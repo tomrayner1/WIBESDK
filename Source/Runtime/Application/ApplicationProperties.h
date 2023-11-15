@@ -4,7 +4,7 @@
 
 #include "ApplicationRequirements.h"
 
-namespace Engine {
+namespace RW {
 
 	struct ApplicationProperties
 	{

@@ -4,7 +4,7 @@
 
 #include <functional>
 
-namespace Engine {
+namespace RW {
 
 	class EventDispatcher;
 

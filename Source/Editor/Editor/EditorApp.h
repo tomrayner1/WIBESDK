@@ -5,10 +5,10 @@
 
 #include "EditorLayer.h"
 
-class EditorApp : public Engine::BaseApplication
+class EditorApp : public RW::BaseApplication
 {
 public:
-	EditorApp(const Engine::ApplicationProperties& props);
+	EditorApp(const RW::ApplicationProperties& props);
 	~EditorApp();
 
 private:

@@ -4,7 +4,7 @@
 
 #include <vector>
 
-namespace Runtime {
+namespace RW {
 
 	class LayerStack
 	{
@@ -12,17 +12,17 @@ namespace Runtime {
 		LayerStack();
 		~LayerStack();
 
-		void PushLayer(Engine::Layer* layer);
-		void PopLayer(Engine::Layer* layer);
+		void PushLayer(Layer* layer);
+		void PopLayer(Layer* layer);
 
-		void PushOverlay(Engine::Layer* overlay);
-		void PopOverlay(Engine::Layer* overlay);
+		void PushOverlay(Layer* overlay);
+		void PopOverlay(Layer* overlay);
 
-		std::vector<Engine::Layer*>::iterator begin();
-		std::vector<Engine::Layer*>::iterator end();
+		std::vector<Layer*>::iterator begin();
+		std::vector<Layer*>::iterator end();
 	private:
-		std::vector<Engine::Layer*> m_Layers;
-		std::vector<Engine::Layer*>::iterator m_LayerInsert;
+		std::vector<Layer*> m_Layers;
+		std::vector<Layer*>::iterator m_LayerInsert;
 	};
 
 }

@@ -2,7 +2,7 @@
 
 #include "Logger.h"
 
-namespace Runtime {
+namespace RW {
 
 	//
 	// Constructor

@@ -4,22 +4,22 @@
 #include <queue>
 
 // fwd declaration
-namespace Engine {
+namespace RW {
 	class Event;
 
 	struct EventType;
 }
 
 
-namespace Runtime {
+namespace RW {
 
 	// Lets make a queue system instead of having a current event that must 
 	// be handled instantly.
-	inline std::queue<Engine::Event*> g_EventQueue;
+	inline std::queue<Event*> g_EventQueue;
 
 }
 
-namespace Engine {
+namespace RW {
 
 	struct EventType
 	{

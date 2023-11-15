@@ -4,7 +4,7 @@
 
 #include "Events/Event.h"
 
-namespace Engine {
+namespace RW {
 
 	class Layer
 	{
@@ -21,7 +21,7 @@ namespace Engine {
 
 		virtual void OnFrame() {}
 
-		virtual void OnEvent(Engine::Event& event) {}
+		virtual void OnEvent(Event& event) {}
 		
 		#ifdef _DEBUG
 		inline const std::string& GetName() const;

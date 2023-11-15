@@ -2,10 +2,10 @@
 
 #include "ImGuiLayer.h"
 
-namespace Runtime {
+namespace RW {
 
 	ImGuiLayer::ImGuiLayer()
-		: Engine::Layer("ImGuiLayer")
+		: Layer("ImGuiLayer")
 	{
 	}
 
@@ -25,7 +25,7 @@ namespace Runtime {
 	{
 	}
 
-	void ImGuiLayer::OnEvent(Engine::Event& event)
+	void ImGuiLayer::OnEvent(Event& event)
 	{
 	}
 

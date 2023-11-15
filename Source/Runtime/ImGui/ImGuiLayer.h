@@ -3,9 +3,9 @@
 #include "Layers/Layer.h"
 #include "Events/Event.h"
 
-namespace Runtime {
+namespace RW {
 
-	class ImGuiLayer : public Engine::Layer
+	class ImGuiLayer : public Layer
 	{
 	public:
 		ImGuiLayer();
@@ -15,7 +15,7 @@ namespace Runtime {
 		void OnDetatch();
 
 		void OnFrame();
-		void OnEvent(Engine::Event& event);
+		void OnEvent(Event& event);
 	private:
 
 	};

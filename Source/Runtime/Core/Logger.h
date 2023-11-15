@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace Runtime {
+namespace RW {
 
 	enum LogLevel;
 

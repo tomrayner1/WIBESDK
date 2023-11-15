@@ -5,13 +5,13 @@
 //
 // Entry point
 //
-Engine::BaseApplication* Engine::GetApplication()
+RW::BaseApplication* RW::GetApplication()
 {
-	Engine::ApplicationRequirements req = Engine::ApplicationRequirements{};
+	RW::ApplicationRequirements req = RW::ApplicationRequirements{};
 
 	req.FileSystem = true;
 
-	Engine::ApplicationProperties props = {
+	RW::ApplicationProperties props = {
 		"Editor",
 		req
 	};
@@ -22,8 +22,8 @@ Engine::BaseApplication* Engine::GetApplication()
 //
 // Constructor
 //
-EditorApp::EditorApp(const Engine::ApplicationProperties& props)
-	: Engine::BaseApplication(props), m_EditorLayer(EditorLayer())
+EditorApp::EditorApp(const RW::ApplicationProperties& props)
+	: RW::BaseApplication(props), m_EditorLayer(EditorLayer())
 {
 	PushLayer(&m_EditorLayer);
 }

@@ -7,27 +7,27 @@
 
 #include <memory>
 
-namespace Engine {
+namespace RW {
 
 	class BaseApplication
 	{
 	public:
-		BaseApplication(const Engine::ApplicationProperties& props);
+		BaseApplication(const ApplicationProperties& props);
 		virtual ~BaseApplication();
 
 		void Run();
 		void Quit();
 
-		void PushLayer(Engine::Layer* layer);
-		void PushOverlay(Engine::Layer* overlay);
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* overlay);
 
 		void OnEvent(Event& event);
 
-		const Engine::ApplicationProperties& GetProps() const;
+		const ApplicationProperties& GetProps() const;
 	private:
-		Engine::ApplicationProperties m_Props;
+		ApplicationProperties m_Props;
 		bool m_Running;
-		Runtime::LayerStack m_LayerStack;
+		LayerStack m_LayerStack;
 		std::unique_ptr<RuntimeWindow> m_RuntimeWindow;
 	};
 

@@ -2,7 +2,7 @@
 
 #include "LayerStack.h"
 
-namespace Runtime {
+namespace RW {
 
 	LayerStack::LayerStack()
 	{
@@ -11,18 +11,18 @@ namespace Runtime {
 
 	LayerStack::~LayerStack()
 	{
-		for (Engine::Layer* layer : m_Layers)
+		for (Layer* layer : m_Layers)
 		{
 			delete layer;
 		}
 	}
 
-	void LayerStack::PushLayer(Engine::Layer* layer)
+	void LayerStack::PushLayer(Layer* layer)
 	{
 		m_LayerInsert = m_Layers.emplace(m_LayerInsert, layer);
 	}
 
-	void LayerStack::PopLayer(Engine::Layer* layer)
+	void LayerStack::PopLayer(Layer* layer)
 	{
 		auto target = std::find(m_Layers.begin(), m_Layers.end(), layer);
 
@@ -33,12 +33,12 @@ namespace Runtime {
 		}
 	}
 
-	void LayerStack::PushOverlay(Engine::Layer* overlay)
+	void LayerStack::PushOverlay(Layer* overlay)
 	{
 		m_Layers.emplace_back(overlay);
 	}
 
-	void LayerStack::PopOverlay(Engine::Layer* overlay)
+	void LayerStack::PopOverlay(Layer* overlay)
 	{
 		auto target = std::find(m_Layers.begin(), m_Layers.end(), overlay);
 
@@ -48,12 +48,12 @@ namespace Runtime {
 		}
 	}
 
-	std::vector<Engine::Layer*>::iterator LayerStack::begin()
+	std::vector<Layer*>::iterator LayerStack::begin()
 	{
 		return m_Layers.begin();
 	}
 
-	std::vector<Engine::Layer*>::iterator LayerStack::end()
+	std::vector<Layer*>::iterator LayerStack::end()
 	{
 		return m_Layers.end();
 	}

@@ -3,7 +3,7 @@
 #include <string>
 #include <GLFW/glfw3.h>
 
-namespace Engine {
+namespace RW {
 
 	struct WindowProperties
 	{

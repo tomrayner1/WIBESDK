@@ -3,14 +3,11 @@
 #include "Logger.h"
 #include "Application/BaseApplication.h"
 
-inline Runtime::Logger* logger = new Runtime::Logger();
+inline RW::Logger* logger = new RW::Logger();
 
-inline Engine::BaseApplication* g_pApp = nullptr; // defined in entry point
+inline RW::BaseApplication* g_pApp = nullptr; // defined in entry point
 
-// Runtime namespace for internal use,
-// Engine namespace for external use!
-
-namespace Runtime {
+namespace RW {
 
 	void StartCore();
 	void StopCore();
@@ -19,9 +16,9 @@ namespace Runtime {
 
 #include "Application/BaseApplication.h"
 
-namespace Engine {
+namespace RW {
 
-	extern Engine::BaseApplication* GetApplication();
+	extern BaseApplication* GetApplication();
 
 	inline bool g_ShouldRestartProgram = true;
 
