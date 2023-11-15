@@ -17,6 +17,12 @@ Includes["GLFW"] = "%{ThirdPartyDir}/GLFW/include/"
 Libraries["GLFW"] = "%{ThirdPartyDir}/GLFW/glfw3.lib"
 
 --[[
+	imgui
+]]
+
+Includes["imgui"] = "%{ThirdPartyDir}/imgui/include/"
+
+--[[
 	liblzma
 ]]
 

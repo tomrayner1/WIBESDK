@@ -17,7 +17,8 @@ project "Runtime"
 		"%{Includes.FileSystem}",
 		"%{Includes.minizip}",
 		"%{Includes.zlib}",
-		"%{Includes.GLFW}"
+		"%{Includes.GLFW}",
+		"%{Includes.imgui}"
 	}
 
 	links {
