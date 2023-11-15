@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 
+#include <memory>
+
 #include "Application/BaseApplication.h"
 #include "Events/Event.h"
 
