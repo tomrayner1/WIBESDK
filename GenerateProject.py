@@ -107,9 +107,13 @@ if __name__ == "__main__":
         
         os.system("Source\\Build\\GenerateProjectWindows.bat " + action + " frompythonscript")
     elif current_platform == "Linux":
-        print("Not yet implemented!")
+        print("Running 'Source/Build/GenerateProjectLinux.sh " + action + "'.")
+        
+        os.system("Source/Build/GenerateProjectLinux.sh " + action + " frompythonscript")
     elif current_platform == "Darwin":
-        print("Not yet implemented!")
+        print("Running 'Source/Build/GenerateProjectMacOS.sh " + action + "'.")
+        
+        os.system("Source/Build/GenerateProjectMacOS.sh " + action + " frompythonscript")
     else:
         print("An error has occured!")
     
