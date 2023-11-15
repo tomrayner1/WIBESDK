@@ -47,11 +47,13 @@ namespace Engine {
 	void BaseApplication::PushLayer(Engine::Layer* layer)
 	{
 		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
 	}
 
 	void BaseApplication::PushOverlay(Engine::Layer* overlay)
 	{
 		m_LayerStack.PushOverlay(overlay);
+		overlay->OnAttach();
 	}
 
 	void BaseApplication::OnEvent(Event& event)
