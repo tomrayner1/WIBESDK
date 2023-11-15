@@ -3,6 +3,10 @@
 #include "ApplicationProperties.h"
 #include "Layers/Layer.h"
 
+#if 0
+#include "Configuration/ReadDebugCFG.h"
+#endif
+
 namespace RW {
 
 	BaseApplication::BaseApplication(const ApplicationProperties& props)
@@ -21,6 +25,8 @@ namespace RW {
 
 	void BaseApplication::Run()
 	{
+		//StagingOnly::OutputVars();
+
 		while (m_Running)
 		{
 			while (!g_EventQueue.empty())
