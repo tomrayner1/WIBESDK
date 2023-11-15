@@ -2,6 +2,7 @@
 ; when this file is moved into the root. (its in the .gitignore in root)
 ;
 ; This is an example, they can be changed using Mappings.txt
+
 windows=vs2022
 linux=gmake2
 macos=gmake2
