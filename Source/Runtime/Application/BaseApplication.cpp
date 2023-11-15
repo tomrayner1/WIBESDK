@@ -16,13 +16,20 @@ namespace Engine {
 
 	BaseApplication::~BaseApplication()
 	{
-		
+		Quit();
 	}
 
 	void BaseApplication::Run()
 	{
 		while (m_Running)
 		{
+			while (!Runtime::g_EventQueue.empty())
+			{
+				Event* event = Runtime::g_EventQueue.front();
+
+				//OnEvent(&(Event)event);
+			}
+
 			for (Engine::Layer* layer : m_LayerStack)
 			{
 				layer->OnFrame();
