@@ -30,15 +30,18 @@ namespace RW {
 	class Event 
 	{
 	public:
-		virtual EventType GetType() const = 0;
+		Event(EventType type);
 
-		virtual std::string ToString() const;
+		EventType GetType() const;
+
+		std::string ToString() const;
 
 		inline bool InCategory(std::string categoryName);
 
 		bool IsHandled();
 	protected:
 		bool m_Handled = false;
+		EventType m_EventType;
 	};
 
 }

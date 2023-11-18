@@ -4,6 +4,16 @@
 
 namespace RW {
 
+	Event::Event(EventType type)
+		: m_EventType(type)
+	{
+	}
+
+	EventType Event::GetType() const
+	{
+		return m_EventType;
+	}
+
 	std::string Event::ToString() const
 	{
 		return this->GetType().Name;

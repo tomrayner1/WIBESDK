@@ -8,16 +8,9 @@ namespace RW {
 	{
 	public:
 		KeyDownEvent(int key) 
-			: m_KeyID(key)
+			: Event({"KeyDown", "Key"})
+			, m_KeyID(key)
 		{
-		}
-
-		virtual EventType GetType() const override
-		{
-			return 
-			{
-				"KeyDown", "Key"
-			};
 		}
 
 		inline int GetKeyID() const 
@@ -33,16 +26,9 @@ namespace RW {
 	{
 	public:
 		KeyUpEvent(int key)
-			: m_KeyID(key)
+			: Event({ "KeyUp", "Key" })
+			, m_KeyID(key)
 		{
-		}
-
-		virtual EventType GetType() const override
-		{
-			return
-			{
-				"KeyUp", "Key"
-			};
 		}
 
 		inline int GetKeyID() const

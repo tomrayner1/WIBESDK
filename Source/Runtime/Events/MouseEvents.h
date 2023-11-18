@@ -8,16 +8,9 @@ namespace RW {
 	{
 	public:
 		MouseButtonDownEvent(float xoffset, float yoffset, int key)
-			: m_XOffset(xoffset), m_YOffset(yoffset), m_KeyID(key)
+			: Event({"MouseButtonDown", "Mouse"})
+			, m_XOffset(xoffset), m_YOffset(yoffset), m_KeyID(key)
 		{
-		}
-
-		virtual EventType GetType() const override
-		{
-			return
-			{
-				"MouseButtonDown", "Mouse"
-			};
 		}
 
 		inline float GetX() const
@@ -44,16 +37,9 @@ namespace RW {
 	{
 	public:
 		MouseButtonUpEvent(float xoffset, float yoffset, int key)
-			: m_XOffset(xoffset), m_YOffset(yoffset), m_KeyID(key)
+			: Event({"MouseButtonUp", "Mouse"})
+			, m_XOffset(xoffset), m_YOffset(yoffset), m_KeyID(key)
 		{
-		}
-
-		virtual EventType GetType() const override
-		{
-			return
-			{
-				"MouseButtonUp", "Mouse"
-			};
 		}
 
 		inline float GetX() const
@@ -83,16 +69,9 @@ namespace RW {
 	{
 	public:
 		MouseScrollEvent(float xoffset, float yoffset, bool up)
-			: m_XOffset(xoffset), m_YOffset(yoffset), m_ScrollUp(up)
+			: Event({"MouseScroll", "Mouse"})
+			, m_XOffset(xoffset), m_YOffset(yoffset), m_ScrollUp(up)
 		{
-		}
-
-		virtual EventType GetType() const override
-		{
-			return
-			{
-				"MouseScroll", "Mouse"
-			};
 		}
 
 		inline float GetX() const
@@ -119,16 +98,9 @@ namespace RW {
 	{
 	public:
 		MouseMoveEvent(float xoffset, float yoffset)
-			: m_XOffset(xoffset), m_YOffset(yoffset)
+			: Event({"MouseMove", "Mouse"})
+			, m_XOffset(xoffset), m_YOffset(yoffset)
 		{
-		}
-
-		virtual EventType GetType() const override
-		{
-			return
-			{
-				"MouseMove", "Mouse"
-			};
 		}
 
 		inline float GetX() const

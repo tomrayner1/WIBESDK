@@ -3,9 +3,7 @@
 #include "ApplicationProperties.h"
 #include "Layers/Layer.h"
 
-#if 0
-#include "Configuration/ReadDebugCFG.h"
-#endif
+//#include "Configuration/ReadDebugCFG.h
 
 namespace RW {
 
@@ -33,7 +31,9 @@ namespace RW {
 			{
 				Event* event = g_EventQueue.front();
 
-				//OnEvent(&(Event)event);
+				OnEvent(*event);
+
+				g_EventQueue.pop();
 			}
 
 			for (Layer* layer : m_LayerStack)
