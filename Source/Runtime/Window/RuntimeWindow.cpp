@@ -2,6 +2,11 @@
 
 #include "RuntimeWindow.h"
 
+#include "Events/EventDispatcher.h"
+#include "Events/WindowEvents.h"
+
+#include "Core/Engine.h"
+
 namespace RW {
 
 	RuntimeWindow::RuntimeWindow(WindowProperties& props)
@@ -19,6 +24,34 @@ namespace RW {
 			m_ErrorDuringCreation = true;
 			return;
 		}
+
+		// Point to properties
+		glfwSetWindowUserPointer(m_Window, &m_Props);
+
+		// Callbacks
+
+		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height)
+			{
+				WindowProperties& props = *(WindowProperties*)glfwGetWindowUserPointer(window);
+
+				props.Width = width;
+				props.Height = height;
+
+				WindowResizedEvent e = WindowResizedEvent(width, height);
+
+				DispatchEvent(e);
+			}
+		);
+
+		glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
+			{
+				WindowClosedEvent e = WindowClosedEvent();
+
+				DispatchEvent(e);
+
+				g_pApp->Quit();
+			}
+		);
 
 		SetVSync(true);
 	}
@@ -49,6 +82,11 @@ namespace RW {
 		}
 
 		m_VSync = vsync;
+	}
+
+	WindowProperties& RuntimeWindow::GetProps()
+	{
+		return m_Props;
 	}
 
 }

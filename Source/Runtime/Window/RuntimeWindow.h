@@ -28,6 +28,8 @@ namespace RW {
 		void Update();
 
 		void SetVSync(bool vsync);
+
+		WindowProperties& GetProps();
 	private:
 		WindowProperties& m_Props;
 		GLFWwindow* m_Window;
