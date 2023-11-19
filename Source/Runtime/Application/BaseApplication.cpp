@@ -2,6 +2,7 @@
 #include "BaseApplication.h"
 #include "ApplicationProperties.h"
 #include "Layers/Layer.h"
+#include "Core/Engine.h"
 
 //#include "Configuration/ReadDebugCFG.h
 
@@ -25,6 +26,8 @@ namespace RW {
 	{
 		//StagingOnly::OutputVars();
 
+		uint64_t frameCount = 1;
+
 		while (m_Running)
 		{
 			while (!g_EventQueue.empty())
@@ -42,6 +45,10 @@ namespace RW {
 			}
 			
 			m_RuntimeWindow->Update();
+
+			//logger->Info("[Application] Frame " + std::to_string(frameCount));
+
+			frameCount++;
 		}
 	}
 
