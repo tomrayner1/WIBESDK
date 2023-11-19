@@ -13,8 +13,10 @@ namespace RW {
 	{
 		for (Layer* layer : m_Layers)
 		{
-			delete layer;
+			layer->OnDetatch();
 		}
+
+		m_Layers.erase(begin(), end());
 	}
 
 	void LayerStack::PushLayer(Layer* layer)
