@@ -7,16 +7,12 @@ inline RW::Logger* logger = new RW::Logger();
 
 inline RW::BaseApplication* g_pApp = nullptr; // defined in entry point
 
-namespace RW {
+namespace RW { namespace Internal_Only {
 
 	void StartCore();
 	void StopCore();
 
 }
-
-#include "Application/BaseApplication.h"
-
-namespace RW {
 
 	extern BaseApplication* GetApplication();
 

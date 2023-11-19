@@ -23,7 +23,7 @@ int main(int argc, char* argv)
 	{
 		RW::g_ShouldRestartProgram = false;
 
-		RW::StartCore();
+		RW::Internal_Only::StartCore();
 		g_pApp = RW::GetApplication();
 
 		if (brAssert(g_pApp != nullptr, "GetApplication() is not defined!"))
@@ -36,7 +36,7 @@ int main(int argc, char* argv)
 		}
 
 		SmallCleanup();
-		RW::StopCore();
+		RW::Internal_Only::StopCore();
 	}
 
 	return 0;

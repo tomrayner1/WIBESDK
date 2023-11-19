@@ -12,7 +12,6 @@ namespace RW {
 	RuntimeWindow::RuntimeWindow(WindowProperties& props)
 		: m_Props(props)
 	{
-		glfwInit();
 
 		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
@@ -20,7 +19,6 @@ namespace RW {
 
 		if (!m_Window)
 		{
-			glfwTerminate();
 			m_ErrorDuringCreation = true;
 			return;
 		}
@@ -61,7 +59,6 @@ namespace RW {
 		if (!m_ErrorDuringCreation)
 		{
 			glfwDestroyWindow(m_Window);
-			glfwTerminate();
 		}
 	}
 
