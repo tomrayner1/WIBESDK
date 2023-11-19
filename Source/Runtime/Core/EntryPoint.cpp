@@ -8,9 +8,9 @@
 //#include <VFS_Staging.h>
 //#include <VFS.h>
 
-// Hide the command prompt pop-up in release mode
+// Hide the command prompt pop-up in shipping mode
 #if IsWin()
-# 	ifndef _DEBUG
+# 	ifdef SHIPPING
 #		pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
 #	endif
 #endif
