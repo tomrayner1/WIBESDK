@@ -6,6 +6,7 @@ namespace RW {
 	{
 		bool FileSystem = false;
 		bool LauncherWindow = false;
+		bool DiscordRPC = false;
 	};
 
 }
