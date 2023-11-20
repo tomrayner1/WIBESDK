@@ -19,13 +19,15 @@ project "Runtime"
 		"%{Includes.zlib}",
 		"%{Includes.GLFW}",
 		"%{Includes.imgui}",
-		"%{Includes.yaml}"
+		"%{Includes.yaml}",
+		"%{Includes.discord_rpc}"
 	}
 
 	links {
 		"BaseLibrary",
 		"FileSystem",
-		"%{Libraries.GLFW}"
+		"%{Libraries.GLFW}",
+		"%{Libraries.discord_rpc}"
 	}
 
 	defines {
@@ -75,18 +77,6 @@ project "Editor"
 		"FileSystem",
 		"Runtime"
 	}
-
-	filter "configurations:Debug"
-		links {
-			"%{Libraries.yaml_d}"
-		}
-	
-	filter "configurations:not Debug"
-		links {
-			"%{Libraries.yaml}"
-		}
-	
-	filter ""
 
 	addResource("Editor")
 
