@@ -30,7 +30,7 @@ namespace RW {
 		LayerStack m_LayerStack;
 		std::unique_ptr<RuntimeWindow> m_RuntimeWindow;
 	protected:
-		uint64_t m_DiscordClientToken = 0;
+		std::string m_DiscordClientToken = "";
 	};
 
 }

@@ -7,11 +7,11 @@
 namespace RW { namespace DiscordI {
 
 
-	void Setup(uint64_t token)
+	void Setup(std::string token)
 	{
 		logger->Info("RW::DiscordI::Setup()");
 		DiscordEventHandlers handlers;
-		Discord_Initialize(std::to_string(token).c_str(), &handlers, 1, NULL);
+		Discord_Initialize(token.c_str(), &handlers, 1, NULL);
 	}
 
 	void Tick()
@@ -33,11 +33,15 @@ namespace RW { namespace DiscordI {
 
 		Discord_UpdatePresence(&discordPresence);
 		Discord_RunCallbacks();
+
+		logger->Info("RW::DiscordI::Tick()");
 	}
 
 	void Shutdown()
 	{
 		Discord_Shutdown();
+
+		logger->Info("RW::DiscordI::Shutdown()");
 	}
 
 }}

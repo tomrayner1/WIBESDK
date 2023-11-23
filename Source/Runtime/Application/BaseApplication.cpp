@@ -20,7 +20,6 @@ namespace RW {
 
 	BaseApplication::~BaseApplication()
 	{
-		Quit();
 	}
 
 	void BaseApplication::Run()
