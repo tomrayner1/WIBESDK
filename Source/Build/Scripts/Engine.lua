@@ -19,15 +19,13 @@ project "Runtime"
 		"%{Includes.zlib}",
 		"%{Includes.GLFW}",
 		"%{Includes.imgui}",
-		"%{Includes.yaml}",
-		"%{Includes.discord_rpc}"
+		"%{Includes.yaml}"
 	}
 
 	links {
 		"BaseLibrary",
 		"FileSystem",
-		"%{Libraries.GLFW}",
-		"%{Libraries.discord_rpc}"
+		"%{Libraries.GLFW}"
 	}
 
 	defines {

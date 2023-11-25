@@ -29,8 +29,6 @@ namespace wibe {
 		bool m_Running;
 		LayerStack m_LayerStack;
 		std::unique_ptr<RuntimeWindow> m_RuntimeWindow;
-	protected:
-		std::string m_DiscordClientToken = "";
 	};
 
 }

@@ -6,7 +6,6 @@ namespace wibe {
 	{
 		bool FileSystem = false;
 		bool LauncherWindow = false;
-		bool DiscordRPC = false;
 	};
 
 }

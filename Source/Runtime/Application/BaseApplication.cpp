@@ -5,8 +5,6 @@
 #include "Core/Engine.h"
 //#include "Configuration/ReadDebugCFG.h"
 
-#include "Integration/DiscordIntegration.h"
-
 namespace wibe {
 
 	BaseApplication::BaseApplication(const ApplicationProperties& props)
@@ -28,11 +26,6 @@ namespace wibe {
 
 		uint64_t frameCount = 1;
 
-		if (m_Props.Requirements.DiscordRPC)
-		{
-			DiscordI::Setup(m_DiscordClientToken);
-		}
-
 		while (m_Running)
 		{
 			while (!g_EventQueue.empty())
@@ -53,11 +46,6 @@ namespace wibe {
 
 			//logger->Info("[Application] Frame " + std::to_string(frameCount));
 
-			if (m_Props.Requirements.DiscordRPC)
-			{
-				DiscordI::Tick();
-			}
-
 			frameCount++;
 		}
 	}
@@ -65,11 +53,6 @@ namespace wibe {
 	void BaseApplication::Quit()
 	{
 		m_Running = false;
-
-		if (m_Props.Requirements.DiscordRPC)
-		{
-			DiscordI::Shutdown();
-		}
 	}
 
 	void BaseApplication::PushLayer(Layer* layer)
