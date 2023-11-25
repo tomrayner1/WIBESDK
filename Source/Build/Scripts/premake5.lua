@@ -8,7 +8,7 @@ function addResource(resourceName)
 	filter {}
 end
 
-workspace "RWSDK"
+workspace "WIBESDK"
 	platforms "x86_64"
 	architecture "x86_64"
 	location "%{SourceFolder}/../"

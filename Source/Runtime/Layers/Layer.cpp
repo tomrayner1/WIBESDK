@@ -2,7 +2,7 @@
 
 #include "Layer.h"
 
-namespace RW {
+namespace wibe {
 
 	#ifdef _DEBUG
 

@@ -7,7 +7,7 @@
 
 #include <memory>
 
-namespace RW {
+namespace wibe {
 
 	class BaseApplication
 	{

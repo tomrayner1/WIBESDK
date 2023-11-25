@@ -3,11 +3,11 @@
 #include <string>
 #include <GLFW/glfw3.h>
 
-namespace RW {
+namespace wibe {
 
 	struct WindowProperties
 	{
-		std::string Title = "RW Engine";
+		std::string Title = "Wibe Engine";
 		uint16_t Width = 1280;
 		uint16_t Height = 720;
 	};

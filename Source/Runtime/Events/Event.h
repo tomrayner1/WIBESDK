@@ -4,14 +4,14 @@
 #include <queue>
 
 // fwd declaration
-namespace RW {
+namespace wibe {
 	class Event;
 
 	struct EventType;
 }
 
 
-namespace RW {
+namespace wibe {
 
 	// Lets make a queue system instead of having a current event that must 
 	// be handled instantly.
@@ -19,7 +19,7 @@ namespace RW {
 
 }
 
-namespace RW {
+namespace wibe {
 
 	struct EventType
 	{

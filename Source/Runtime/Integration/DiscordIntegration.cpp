@@ -4,12 +4,12 @@
 
 #include <filesystem>
 
-namespace RW { namespace DiscordI {
+namespace wibe { namespace DiscordI {
 
 
 	void Setup(std::string token)
 	{
-		logger->Info("RW::DiscordI::Setup()");
+		logger->Info("wibe::DiscordI::Setup()");
 		DiscordEventHandlers handlers;
 		Discord_Initialize(token.c_str(), &handlers, 1, NULL);
 	}
@@ -34,14 +34,14 @@ namespace RW { namespace DiscordI {
 		Discord_UpdatePresence(&discordPresence);
 		Discord_RunCallbacks();
 
-		logger->Info("RW::DiscordI::Tick()");
+		logger->Info("wibe::DiscordI::Tick()");
 	}
 
 	void Shutdown()
 	{
 		Discord_Shutdown();
 
-		logger->Info("RW::DiscordI::Shutdown()");
+		logger->Info("wibe::DiscordI::Shutdown()");
 	}
 
 }}

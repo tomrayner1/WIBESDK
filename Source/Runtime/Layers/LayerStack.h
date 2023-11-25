@@ -4,7 +4,7 @@
 
 #include <vector>
 
-namespace RW {
+namespace wibe {
 
 	class LayerStack
 	{

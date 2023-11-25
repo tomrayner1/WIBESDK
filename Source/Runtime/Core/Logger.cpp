@@ -2,7 +2,7 @@
 
 #include "Logger.h"
 
-namespace RW {
+namespace wibe {
 
 	//
 	// Constructor

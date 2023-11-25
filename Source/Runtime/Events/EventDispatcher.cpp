@@ -3,7 +3,7 @@
 #include "EventDispatcher.h"
 #include "Core/Engine.h"
 
-namespace RW {
+namespace wibe {
 
 	void DispatchEvent(Event& e)
 	{

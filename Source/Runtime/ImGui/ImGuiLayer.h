@@ -3,7 +3,7 @@
 #include "Layers/Layer.h"
 #include "Events/Event.h"
 
-namespace RW {
+namespace wibe {
 
 	class ImGuiLayer : public Layer
 	{

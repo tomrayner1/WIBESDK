@@ -2,7 +2,7 @@
 
 #include "Event.h"
 
-namespace RW {
+namespace wibe {
 
 	Event::Event(EventType type)
 		: m_EventType(type)

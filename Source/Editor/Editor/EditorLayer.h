@@ -2,7 +2,7 @@
 
 #include <Layers/Layer.h>
 
-class EditorLayer : public RW::Layer
+class EditorLayer : public wibe::Layer
 {
 public:
 	EditorLayer();

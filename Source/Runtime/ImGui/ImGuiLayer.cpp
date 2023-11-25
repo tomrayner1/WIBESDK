@@ -2,7 +2,7 @@
 
 #include "ImGuiLayer.h"
 
-namespace RW {
+namespace wibe {
 
 	ImGuiLayer::ImGuiLayer()
 		#ifdef _DEBUG

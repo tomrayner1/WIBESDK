@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace RW {
+namespace wibe {
 
 	enum LogLevel;
 

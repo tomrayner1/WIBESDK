@@ -2,7 +2,7 @@
 
 #include <discord_rpc.h>
 
-namespace RW { namespace DiscordI {
+namespace wibe { namespace DiscordI {
 
 	inline int64_t g_StartTime = time(0);
 

@@ -2,7 +2,7 @@
 
 #include "Event.h"
 
-namespace RW {
+namespace wibe {
 
 	class MouseButtonDownEvent : public Event
 	{

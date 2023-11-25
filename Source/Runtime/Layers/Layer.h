@@ -4,7 +4,7 @@
 
 #include "Events/Event.h"
 
-namespace RW {
+namespace wibe {
 
 	class Layer
 	{

@@ -7,7 +7,7 @@
 
 #include "Integration/DiscordIntegration.h"
 
-namespace RW {
+namespace wibe {
 
 	BaseApplication::BaseApplication(const ApplicationProperties& props)
 		: m_Running(true), m_Props(props)

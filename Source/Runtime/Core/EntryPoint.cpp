@@ -19,12 +19,12 @@ void SmallCleanup();
 
 int main(int argc, char* argv)
 {
-	while (RW::g_ShouldRestartProgram)
+	while (wibe::g_ShouldRestartProgram)
 	{
-		RW::g_ShouldRestartProgram = false;
+		wibe::g_ShouldRestartProgram = false;
 
-		RW::Internal_Only::StartCore();
-		g_pApp = RW::GetApplication();
+		wibe::Internal_Only::StartCore();
+		g_pApp = wibe::GetApplication();
 
 		if (brAssert(g_pApp != nullptr, "GetApplication() is not defined!"))
 		{
@@ -36,7 +36,7 @@ int main(int argc, char* argv)
 		}
 
 		SmallCleanup();
-		RW::Internal_Only::StopCore();
+		wibe::Internal_Only::StopCore();
 	}
 
 	return 0;

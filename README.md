@@ -1,8 +1,8 @@
-# RW Engine
+# Wibe Engine
 
 `Small graphics/game engine with tools and dependencies in one`
 
-This repository contains the source code for the RW runtime and tools. It also contains an example project using the engine and editor files.
+This repository contains the source code for the Wibe runtime and tools. It also contains an example project using the engine and editor files.
 
 ## Table of contents
 

@@ -3,11 +3,11 @@
 #include "Logger.h"
 #include "Application/BaseApplication.h"
 
-inline RW::Logger* logger = new RW::Logger();
+inline wibe::Logger* logger = new wibe::Logger();
 
-inline RW::BaseApplication* g_pApp = nullptr; // defined in entry point
+inline wibe::BaseApplication* g_pApp = nullptr; // defined in entry point
 
-namespace RW { namespace Internal_Only {
+namespace wibe { namespace Internal_Only {
 
 	void StartCore();
 	void StopCore();

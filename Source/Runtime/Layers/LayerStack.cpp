@@ -2,7 +2,7 @@
 
 #include "LayerStack.h"
 
-namespace RW {
+namespace wibe {
 
 	LayerStack::LayerStack()
 	{

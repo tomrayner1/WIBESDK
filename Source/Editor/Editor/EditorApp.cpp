@@ -5,14 +5,14 @@
 //
 // Entry point
 //
-RW::BaseApplication* RW::GetApplication()
+wibe::BaseApplication* wibe::GetApplication()
 {
-	RW::ApplicationRequirements req = RW::ApplicationRequirements{};
+	wibe::ApplicationRequirements req = wibe::ApplicationRequirements{};
 
 	req.FileSystem = true;
 	req.DiscordRPC = true;
 
-	RW::ApplicationProperties props = {
+	wibe::ApplicationProperties props = {
 		"Editor",
 		req
 	};
@@ -23,8 +23,8 @@ RW::BaseApplication* RW::GetApplication()
 //
 // Constructor
 //
-EditorApp::EditorApp(const RW::ApplicationProperties& props)
-	: RW::BaseApplication(props), m_EditorLayer(EditorLayer())
+EditorApp::EditorApp(const wibe::ApplicationProperties& props)
+	: wibe::BaseApplication(props), m_EditorLayer(EditorLayer())
 {
 	m_DiscordClientToken = 1175921210127831120;
 	PushLayer(&m_EditorLayer);

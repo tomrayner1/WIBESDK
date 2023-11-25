@@ -5,10 +5,10 @@
 
 #include "EditorLayer.h"
 
-class EditorApp : public RW::BaseApplication
+class EditorApp : public wibe::BaseApplication
 {
 public:
-	EditorApp(const RW::ApplicationProperties& props);
+	EditorApp(const wibe::ApplicationProperties& props);
 	~EditorApp();
 
 private:

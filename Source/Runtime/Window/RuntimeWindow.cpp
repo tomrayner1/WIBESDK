@@ -7,7 +7,7 @@
 
 #include "Core/Engine.h"
 
-namespace RW {
+namespace wibe {
 
 	RuntimeWindow::RuntimeWindow(WindowProperties& props)
 		: m_Props(props)

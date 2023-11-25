@@ -1,6 +1,6 @@
 #pragma once
 
-namespace RW {
+namespace wibe {
 
 	struct ApplicationRequirements
 	{

@@ -4,7 +4,7 @@
 
 #include "ApplicationRequirements.h"
 
-namespace RW {
+namespace wibe {
 
 	struct ApplicationProperties
 	{
