@@ -24,7 +24,7 @@ Makefile
 *.DS_Store
 
 # Build folder
-/Build/
+/Bin/
 
 # Generator
 /GenerationPreferences.txt
