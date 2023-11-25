@@ -10,13 +10,6 @@ Libraries = {}
 Libraries["bzip2"] = "%{ThirdPartyDir}/bzip2/bzip2.lib"
 
 --[[
-	discord_rpc
-]]
-
-Includes["discord_rpc"] = "%{ThirdPartyDir}/discord_rpc/include/"
-Libraries["discord_rpc"] = "%{ThirdPartyDir}/discord_rpc/discord-rpc.lib" 
-
---[[
 	GLFW
 ]]
 
