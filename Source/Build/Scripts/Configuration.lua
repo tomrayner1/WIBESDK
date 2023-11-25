@@ -3,6 +3,6 @@ SourceFolder = "../../"
 
 --StartupProject = "Editor"
 
-TargetPath = "%{SourceFolder}/../Build/"
+TargetPath = "%{SourceFolder}/../Bin/"
 
-ObjectPath = "%{SourceFolder}/../Build/%{prj.name}_%{cfg.buildcfg}_%{cfg.architecture}/"
+ObjectPath = "%{SourceFolder}/../Bin/%{prj.name}_%{cfg.buildcfg}_%{cfg.architecture}/"
