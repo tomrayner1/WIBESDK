@@ -7,10 +7,13 @@
 
 #include "Core/Engine.h"
 
+#include "Render/Render.h"
+#include "Render/D3D12/D3D12Context.h"
+
 namespace wibe {
 
 	RuntimeWindow::RuntimeWindow(WindowProperties& props)
-		: m_Props(props)
+		: m_Props(props), m_Context(nullptr)
 	{
 
 		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
@@ -22,6 +25,38 @@ namespace wibe {
 			m_ErrorDuringCreation = true;
 			return;
 		}
+		
+		// TODO: properly implement other rendering apis
+		switch (g_RenderAPI)
+		{
+		case RenderAPI::DIRECTX11:
+			g_Logger->Info("Using DX11...");
+
+			break;
+		case RenderAPI::DIRECTX12:
+			g_Logger->Info("Using DX12...");
+
+			m_Context = new D3D12Context(m_Window);
+
+			break;
+		case RenderAPI::VULKAN:
+			g_Logger->Info("Using Vulkan...");
+
+			break;
+		case RenderAPI::METAL:
+			g_Logger->Info("Using Metal...");
+
+			break;
+		case RenderAPI::OPENGL:
+			g_Logger->Info("Using OpenGL...");
+
+//			m_Context = new OpenGLContext(m_Window);
+
+			break;
+		}
+
+		if (m_Context != nullptr)
+			m_Context->Init();
 
 		// Point to properties
 		glfwSetWindowUserPointer(m_Window, &m_Props);

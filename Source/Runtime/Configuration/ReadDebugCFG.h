@@ -14,7 +14,7 @@ namespace StagingOnly {
 
 		if (!std::filesystem::exists(path))
 		{
-			logger->Warn("Config/debug.cfg does not exist!");
+			g_Logger->Warn("Config/debug.cfg does not exist!");
 			return;
 		}
 
@@ -28,7 +28,7 @@ namespace StagingOnly {
 		}
 		catch (const std::exception& e)
 		{
-			logger->Warn("YAML ERROR: " + std::string(e.what()));
+			g_Logger->Warn("YAML ERROR: " + std::string(e.what()));
 		}
 	}
 

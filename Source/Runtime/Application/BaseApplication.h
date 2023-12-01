@@ -5,6 +5,8 @@
 #include "Layers/LayerStack.h"
 #include "Window/RuntimeWindow.h"
 
+#include "Render/Render.h"
+
 #include <memory>
 
 namespace wibe {
@@ -12,7 +14,7 @@ namespace wibe {
 	class BaseApplication
 	{
 	public:
-		BaseApplication(const ApplicationProperties& props);
+		BaseApplication(const ApplicationProperties& props, RenderAPI preferredAPI);
 		virtual ~BaseApplication();
 
 		void Run();
@@ -24,6 +26,8 @@ namespace wibe {
 		void OnEvent(Event& event);
 
 		const ApplicationProperties& GetProps() const;
+
+		RenderAPI GetPreferredRenderingAPI();
 	private:
 		ApplicationProperties m_Props;
 		bool m_Running;

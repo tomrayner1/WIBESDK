@@ -2,6 +2,8 @@
 
 #include "EditorLayer.h"
 
+#include <Render/Render.h>
+
 //
 // Entry point
 //
@@ -23,7 +25,7 @@ wibe::BaseApplication* wibe::GetApplication()
 // Constructor
 //
 EditorApp::EditorApp(const wibe::ApplicationProperties& props)
-	: wibe::BaseApplication(props), m_EditorLayer(EditorLayer())
+	: wibe::BaseApplication(props, wibe::RenderAPI::DIRECTX11), m_EditorLayer(EditorLayer())
 {
 	PushLayer(&m_EditorLayer);
 }
