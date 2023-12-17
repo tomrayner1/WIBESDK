@@ -14,7 +14,7 @@ namespace wibe {
 	class BaseApplication
 	{
 	public:
-		BaseApplication(const ApplicationProperties& props, RenderAPI preferredAPI);
+		BaseApplication(const ApplicationProperties& props, RenderAPI preferredAPI = RenderAPI::NONE);
 		virtual ~BaseApplication();
 
 		void Run();

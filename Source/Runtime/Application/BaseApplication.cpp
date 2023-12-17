@@ -9,7 +9,7 @@
 
 namespace wibe {
 
-	BaseApplication::BaseApplication(const ApplicationProperties& props, RenderAPI preferredAPI=RenderAPI::NONE)
+	BaseApplication::BaseApplication(const ApplicationProperties& props, RenderAPI preferredAPI)
 		: m_Running(true), m_Props(props)
 	{
 		g_RenderAPI = preferredAPI;
