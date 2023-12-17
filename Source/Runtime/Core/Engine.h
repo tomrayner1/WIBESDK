@@ -3,7 +3,7 @@
 #include "Logger.h"
 #include "Application/BaseApplication.h"
 
-inline wibe::Logger* logger = new wibe::Logger();
+inline wibe::Logger* g_Logger = new wibe::Logger();
 
 inline wibe::BaseApplication* g_pApp = nullptr; // defined in entry point
 

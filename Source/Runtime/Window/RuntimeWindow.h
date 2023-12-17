@@ -3,6 +3,8 @@
 #include <string>
 #include <GLFW/glfw3.h>
 
+#include "Render/RenderContext.h"
+
 namespace wibe {
 
 	struct WindowProperties
@@ -33,6 +35,8 @@ namespace wibe {
 	private:
 		WindowProperties& m_Props;
 		GLFWwindow* m_Window;
+
+		RenderContext* m_Context;
 
 		bool m_ErrorDuringCreation = false;
 

@@ -1,15 +1,21 @@
 #include "Core/StdAfx.h"
+
 #include "BaseApplication.h"
 #include "ApplicationProperties.h"
 #include "Layers/Layer.h"
 #include "Core/Engine.h"
-//#include "Configuration/ReadDebugCFG.h"
+
+#include "Render/Render.h"
 
 namespace wibe {
 
-	BaseApplication::BaseApplication(const ApplicationProperties& props)
+	BaseApplication::BaseApplication(const ApplicationProperties& props, RenderAPI preferredAPI)
 		: m_Running(true), m_Props(props)
 	{
+		g_RenderAPI = preferredAPI;
+
+		SetupRenderGlobalVars(); // will set the render api to the most appropriate for the target platform
+
 		WindowProperties wndProps = {};
 		wndProps.Title = props.Name;
 
@@ -78,6 +84,11 @@ namespace wibe {
 				break;
 			}
 		}
+	}
+
+	RenderAPI BaseApplication::GetPreferredRenderingAPI()
+	{
+		return g_RenderAPI;
 	}
 
 	const ApplicationProperties& BaseApplication::GetProps() const

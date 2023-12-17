@@ -6,6 +6,8 @@
 #include <string>
 #include <vector>
 
+#include <format>
+
 #include <memory>
 
 #include "Application/BaseApplication.h"

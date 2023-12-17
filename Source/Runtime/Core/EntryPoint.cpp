@@ -28,7 +28,7 @@ int main(int argc, char* argv)
 
 		if (brAssert(g_pApp != nullptr, "GetApplication() is not defined!"))
 		{
-			logger->Error("GetApplication() is nullptr, define in client !");
+			g_Logger->Error("GetApplication() is nullptr, define in client !");
 		}
 		else
 		{
@@ -53,7 +53,7 @@ void SmallCleanup()
 		delete g_pApp;
 	}
 	
-	delete logger;
+	delete g_Logger;
 }
 
 /*

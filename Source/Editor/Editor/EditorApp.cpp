@@ -2,6 +2,8 @@
 
 #include "EditorLayer.h"
 
+#include <Render/Render.h>
+
 //
 // Entry point
 //
@@ -12,7 +14,7 @@ wibe::BaseApplication* wibe::GetApplication()
 	req.FileSystem = true;
 
 	wibe::ApplicationProperties props = {
-		"Editor",
+		"Wibe Editor",
 		req
 	};
 
