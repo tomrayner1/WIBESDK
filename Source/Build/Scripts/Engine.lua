@@ -58,7 +58,9 @@ project "Editor"
 	files {
 		"%{SourceFolder}/Editor/**.h",
 		"%{SourceFolder}/Editor/**.cpp",
-		"%{SourceFolder}/Editor/Editor.rc"
+
+		"%{SourceFolder}/Editor/resource.rc",
+		"%{SourceFolder}/Editor/**.ico"
 	}
 
 	includedirs {
@@ -75,7 +77,5 @@ project "Editor"
 		"FileSystem",
 		"Runtime"
 	}
-
-	addResource("Editor")
 
 group ""

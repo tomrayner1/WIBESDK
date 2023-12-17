@@ -1,13 +1,6 @@
 include "ThirdParty.lua"
 include "Configuration.lua"
 
-function addResource(resourceName)
-	filter "system:windows"
-		buildcommands { 'rc /fo "%{cfg.objdir}/' .. resourceName .. '.res" "' .. resourceName .. '"' }
-		buildoutputs { "%{cfg.objdir}/" .. resourceName .. ".res" }
-	filter {}
-end
-
 workspace "WIBESDK"
 	platforms "x86_64"
 	architecture "x86_64"
