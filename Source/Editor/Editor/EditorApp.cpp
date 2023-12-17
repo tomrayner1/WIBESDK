@@ -14,7 +14,7 @@ wibe::BaseApplication* wibe::GetApplication()
 	req.FileSystem = true;
 
 	wibe::ApplicationProperties props = {
-		"Editor",
+		"Wibe Editor",
 		req
 	};
 
@@ -25,7 +25,7 @@ wibe::BaseApplication* wibe::GetApplication()
 // Constructor
 //
 EditorApp::EditorApp(const wibe::ApplicationProperties& props)
-	: wibe::BaseApplication(props, wibe::RenderAPI::DIRECTX11), m_EditorLayer(EditorLayer())
+	: wibe::BaseApplication(props), m_EditorLayer(EditorLayer())
 {
 	PushLayer(&m_EditorLayer);
 }
